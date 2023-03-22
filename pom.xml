@@ -15,7 +15,7 @@
 	<description>yet another IMDB clone</description>
 	<properties>
 	
-		 <sonar.host.url>https://${SONARURL}/</sonar.host.url>
+		 <sonar.host.url>https://codeinspect.aetdevops.com/</sonar.host.url>
          <sonar.login>${TOKEN}</sonar.login>
 	</properties>
 
