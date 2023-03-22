@@ -16,7 +16,7 @@
 	<properties>
 	
 		 <sonar.host.url>https://codeinspect.aetdevops.com/</sonar.host.url>
-         <sonar.login>${TOKEN}</sonar.login>
+         <sonar.login>squ_41d3911ef5732dea4e18ca7dbb6c984bbb5a4152</sonar.login>
 	</properties>
 
 	<!-- <distributionManagement>
