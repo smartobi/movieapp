@@ -10,23 +10,31 @@
 	</parent>
 	<groupId>dev.farhan</groupId>
 	<artifactId>movieist</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>movieist</name>
 	<description>yet another IMDB clone</description>
-	<!-- <properties>
-		<java.version>19</java.version>
-	</properties> -->
+	<properties>
+		 <sonar.host.url>https://codeinspect.aetdevops.com/</sonar.host.url>
+         <sonar.login>squ_8da352698325cf44ae8f4f873f8e5fbeb26e9c2e</sonar.login>
+	</properties>
 
-	<distributionManagement>
+	<!-- <distributionManagement>
   <repository>
     <id>nexus-releases</id>
-    <url>http://209.97.184.129:8081/repository/movieist-release</url>
+    <url>http://artifact.aetdevops.com:8081/repository/movieist-release/</url>
   </repository>
   <snapshotRepository>
     <id>nexus-snapshots</id>
-    <url>http://209.97.184.129:8081/repository/movieist-snapshot/</url>
+    <url>http://artifact.aetdevops.com:8081/repository/movieist-snapshot/</url>
   </snapshotRepository>
-</distributionManagement>
+</distributionManagement> -->
+
+     <repositories>
+    <repository>
+      <id>${NEXUS-GRP-REPO}</id>
+      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
+    </repository>
+  </repositories>
 
 	<dependencies>
 		<dependency>
@@ -74,7 +82,15 @@
                  <target>19</target>
                  </configuration>
             </plugin>
+			 <plugin>
+             <groupId>org.sonarsource.scanner.maven</groupId>
+             <artifactId>sonar-maven-plugin</artifactId>
+             <version>3.8.0.2131</version>
+             </plugin>
+
+
 		</plugins>
+		<finalName>movies</finalName>
 	</build>
 
 
